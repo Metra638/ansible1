@@ -7,11 +7,10 @@
       include_role:
         name: NODE_EXPORTER
 
-    - name: Include web role for WEB group
+    - name: Include node_exporter role for all hosts
       include_role:
-        name: WEB
-      when: "'WEB' in group_names"
-
+        name: WEBMIN
+    
     - name: Include mysql role for MYSQL group
       include_role:
         name: MYSQL
